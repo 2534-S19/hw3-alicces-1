@@ -93,7 +93,7 @@ void initBoard()
 // Since count is an unsigned integer, you can mask the value in some way.
 void changeLaunchpadLED2(unsigned int count)
 {
-    enum Color {BLACK, RED, YELLOW, GREEN, BLUE, MAGENTA, CYAN, WHITE};
+    enum Color {BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE};
 
     switch(count % 8)
     {
@@ -106,15 +106,15 @@ void changeLaunchpadLED2(unsigned int count)
             turnOffAllLedsOnLaunchpad();
             turnOn_Launchpad_Led2_Red();
             break;
-        case YELLOW:
+        case GREEN:
             // Turn on yellow on launchpad
             turnOffAllLedsOnLaunchpad();
-            turnOn_Launchpad_Led2_Yellow();
+            turnOn_Launchpad_Led2_Green();
             break;
-        case GREEN:
+        case YELLOW:
             // Turn on green on launchpad
             turnOffAllLedsOnLaunchpad();
-            turnOn_Launchpad_Led2_Green();
+            turnOn_Launchpad_Led2_Yellow();
             break;
         case BLUE:
             // Turn on blue on launchpad
@@ -144,7 +144,7 @@ void changeLaunchpadLED2(unsigned int count)
 // This is essentially a copy of the previous function, using a different LED
 void changeBoosterpackLED(unsigned int count)
 {
-    enum Color {BLACK, RED, YELLOW, GREEN, BLUE, MAGENTA, CYAN, WHITE};
+    enum Color {BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE};
 
         switch(count % 8)
         {
@@ -157,15 +157,15 @@ void changeBoosterpackLED(unsigned int count)
                 turnOffAllLedsOnBoosterpack();
                 turnOn_Boosterpack_Led_Red();
                 break;
-            case YELLOW:
+            case GREEN:
                 // Turn on yellow on launchpad
                 turnOffAllLedsOnBoosterpack();
-                turnOn_Boosterpack_Led_Yellow();
+                turnOn_Boosterpack_Led_Green();
                 break;
-            case GREEN:
+            case YELLOW:
                 // Turn on green on launchpad
                 turnOffAllLedsOnBoosterpack();
-                turnOn_Boosterpack_Led_Green();
+                turnOn_Boosterpack_Led_Yellow();
                 break;
             case BLUE:
                 // Turn on blue on launchpad
